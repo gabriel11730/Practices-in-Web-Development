@@ -1,0 +1,294 @@
+:root {
+    --primary-color: #9c27b0;
+    --primary-color-dark: #89119D;
+    --secondary: #FFC300;
+    --secondary-color-dark: #ecaa03;
+    --white: #fff;
+    --black: #000;
+
+    --principal-font: "Staatliches", sans-serif;
+
+}
+
+/*Recuerda el Box-Sizing*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Primarly Config */
+
+body {
+    font-family: var(--principal-font);
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--white);
+}
+
+h1,h2,h3 {
+    text-align: center;
+    color: var(--secondary);
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.7rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+/* Header Config */
+
+.header {
+    max-height: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0rem;
+}
+
+/* Navigation Section */
+
+.navigation {
+    max-height: 10rem;
+    background-color: var(--primary-color-dark);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem; /* Space between elements */
+}
+
+.navigation__link {
+    font-size: 2.6rem;
+    color: var(--white);
+}
+
+.navigation__link:hover {
+    color: var(--secondary);
+}       
+
+/* Main Config */
+
+.main {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.producto {
+    background-color: var(--primary-color-dark);
+}
+
+.producto__img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.producto__name {
+    text-align: center;
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.producto__precio {
+    text-align: center;
+    color: var(--secondary);
+    font-size: 1.8rem;
+}
+
+/* Graficos de relleno */
+
+.grafico {
+    min-height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grafico--camisas {
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.grafico--nodejs {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+    grid-column: 1 / 3;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--primary-color-dark);
+    margin: 1.8rem auto;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.footer__text {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+/* About Us section */
+
+.about_us {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1;
+    gap: 2rem;
+}
+
+.about_us__text {
+    color: var(--white);
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.about_us__img {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+/* Benefits section */
+.beneficios__contenedor {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+.beneficios__contenedor__tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficios__contenedor__tarjeta img {
+    min-width: 15rem;
+    min-height: 15rem;
+}
+
+.beneficios__contenedor__titulo {
+    text-align: center;
+}
+
+.beneficios__contenedor__parrafo {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* Shopping Section */
+
+.shopping__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.shopping__container__img {
+    width: auto;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: var(--primary-color-dark);
+}
+
+.shopping__container__payment_section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 2rem;
+}
+
+.payment_section__text {
+    font-size: 2rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.form__size, .form__qty {
+    border-style: solid;
+    border-color: var(--primary-color-dark);
+    border-width: 1rem;
+    background-color: var(--primary-color);
+    color: var(--black);
+    font-size: 2rem;
+    width: min(100%, 40rem);
+    padding: 1rem;
+}
+
+.form__send {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+
+    background-color: var(--secondary-color-dark);
+    color: var(--black);
+    font-size: 2rem;
+    padding: 2rem 0rem;
+    border-style: none;
+    transition: background-color .3s ease;
+}
+
+.form__send:hover {
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: var(--primary-color);
+}
+
+/* Media Query */
+
+@media (width > 920px) {
+    .grid__container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grafico--nodejs{
+        grid-row: 4 / 5;
+        grid-column: 2 / 4;
+    }
+    .about_us{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about_us__img {
+    grid-column: 2 / 3;
+    }
+    .beneficios__contenedor {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .shopping__container {
+        flex-direction: row;
+    }
+}
+
+@media (920px > width > 465px ) {
+        .beneficios__contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
