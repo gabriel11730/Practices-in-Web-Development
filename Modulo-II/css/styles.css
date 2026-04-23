@@ -21,11 +21,13 @@ html {
     box-sizing: inherit;
 }
 
-/* Primarly Config */
+/* Global Config */
 
 body {
-    font-family: var(--principal-font);
     background-color: var(--primary-color);
+    font-family: var(--principal-font);
+    font-size: 1.6rem;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -35,6 +37,8 @@ a {
 
 p {
     color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
 }
 
 h1,h2,h3 {
@@ -42,20 +46,21 @@ h1,h2,h3 {
     color: var(--secondary);
 }
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 h2 {
-    font-size: 2.7rem;
+    font-size: 3rem;
 }
 h3 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
 }
+
 /* Header Config */
 
 .header {
-    max-height: 20rem;
     display: flex;
     justify-content: center;
+    /* max-height: 20rem; */
 }
 
 .header__logo {
@@ -65,10 +70,10 @@ h3 {
 /* Navigation Section */
 
 .navigation {
-    max-height: 10rem;
     background-color: var(--primary-color-dark);
     display: flex;
     justify-content: center;
+    max-height: 10rem;
     padding: 2rem;
     gap: 2rem; /* Space between elements */
 }
@@ -107,13 +112,11 @@ h3 {
 .producto__name {
     text-align: center;
     color: var(--white);
-    font-size: 2rem;
 }
 
 .producto__precio {
     text-align: center;
     color: var(--secondary);
-    font-size: 1.8rem;
 }
 
 /* Graficos de relleno */
@@ -147,7 +150,6 @@ h3 {
 
 .footer__text {
     color: var(--white);
-    font-size: 2rem;
 }
 
 /* About Us section */
@@ -161,7 +163,6 @@ h3 {
 
 .about_us__text {
     color: var(--white);
-    font-size: 1.8rem;
     line-height: 1.5;
 }
 
@@ -174,7 +175,7 @@ h3 {
 .beneficios__contenedor {
     display: grid;
     grid-template-columns: 1;
-    gap: 1rem;
+    gap: 2rem;
     margin: 0 1rem;
 }
 
@@ -196,7 +197,6 @@ h3 {
 
 .beneficios__contenedor__parrafo {
     text-align: center;
-    font-size: 1.6rem;
 }
 
 /* Shopping Section */
@@ -222,10 +222,6 @@ h3 {
     margin: 0 2rem;
 }
 
-.payment_section__text {
-    font-size: 2rem;
-}
-
 .form {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -238,8 +234,7 @@ h3 {
     border-color: var(--primary-color-dark);
     border-width: 1rem;
     background-color: var(--primary-color);
-    color: var(--black);
-    font-size: 2rem;
+    color: var(--white);
     width: min(100%, 40rem);
     padding: 1rem;
 }
@@ -250,7 +245,6 @@ h3 {
 
     background-color: var(--secondary-color-dark);
     color: var(--black);
-    font-size: 2rem;
     padding: 2rem 0rem;
     border-style: none;
     transition: background-color .3s ease;
